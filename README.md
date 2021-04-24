@@ -34,25 +34,33 @@ type="binomial" <br>
 type="continuous" <br>
 <br />
 
-Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control, for example, for SFED=18: <br>
+Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control, for example, for TCD50 and Gamma50: <br>
+
+<blockquote>
+Number of bootstrap replications R = 1000 <br>
+  original  bootBias bootSE  bootMed <br>
+1 11.02912 -1.827515 4.6973 11.22436 <br>
+2  0.88248 -0.073918 0.4194  0.87013 <br>
+<br />
 
 
 <blockquote> 
-BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS < br>
+boot.ci(results, index=1) <br>
+BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS <br>
 Based on 1000 bootstrap replicates <br>
- 
+<br />
 CALL : <br>
-boot.ci(boot.out = results) <br>
- 
+boot.ci(boot.out = results, index = 1) <br>
+<br />
 Intervals : <br>
-Level      Normal              Basic         <br>
-95%   ( 0.7636,  0.9331 )   ( 0.7743,  0.9342 )  <br>
- 
-Level     Percentile            BCa          <br>
-95%   ( 0.7641,  0.9240 )   ( 0.7614,  0.9230 )  <br>
+Level      Normal              Basic    <br>     
+95%   ( 3.65, 22.06 )   ( 7.77, 22.05 )  <br>
+<br />
+Level     Percentile            BCa   <br>       
+95%   ( 0.01, 14.28 )   ( 0.01, 14.39 )  <br>
 Calculations and Intervals on Original Scale <br>
 </blockquote>
-
+<br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
 Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (assuming they treated data as binomial) was calculated as -685.7, whereas the log-likelihood of a generalized additive model (GAM) with thin plate regression splines was quite better at 20.3: <br>
