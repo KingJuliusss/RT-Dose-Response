@@ -41,6 +41,7 @@ Number of bootstrap replications R = 1000 <br>
   original  bootBias bootSE  bootMed <br>
 1 11.02912 -1.827515 4.6973 11.22436 <br>
 2  0.88248 -0.073918 0.4194  0.87013 <br>
+</blockquote>
 <br />
 
 
