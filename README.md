@@ -52,9 +52,9 @@ Goodness-of-fit parameters were compared with other models, with the log-likelih
 <img src="/fig 5.png">  <br>
 
 Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model demonstrated an estimated 80% higher bias than the GAM fitted model estimates. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, as in the figure above, in contrast to the author’s conclusions. <br>
- 
+<br />
 Next, the published median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modelled is essential data, the absence of which confounds meaningful interpretation of this medical physics dose response work.  <br>
- 
+ <br />
 Once again, the work of the authors of such dose modelling work is appreciated; however, would not such work be much better served with dose response meta-meta-regression under the employ of expert statistical support? Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. <br>
  
  
