@@ -75,7 +75,7 @@ Goodness-of-fit parameters were compared with other models, with the log-likelih
 Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model demonstrated an estimated 80% higher bias than the GAM fitted model estimates. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, as in the figure above, in contrast to the author’s conclusions. <br>
 <br />
 <blockquote>
-bias(df$LC1Yr, fitted(bin1))/bias(df$LC1Yr, fitted(gam1))
+bias(df$LC1Yr, fitted(bin1))/bias(df$LC1Yr, fitted(gam1)) <br>
 [1] 1.800971
 </blockquote>
 <br />
