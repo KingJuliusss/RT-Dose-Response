@@ -63,6 +63,8 @@ Level     Percentile            BCa   <br>
 Calculations and Intervals on Original Scale <br>
 </blockquote>
 <br />
+Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, suggesting model parameter instability
+<br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
 Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (assuming they treated data as binomial) was calculated as -685.7, whereas the log-likelihood of a generalized additive model (GAM) with thin plate regression splines was quite better at 20.3: <br>
