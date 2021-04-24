@@ -31,7 +31,9 @@ type="binomial" <br>
 <br />
 
 <img src="/cont drm.png">  <br>
- 
+type="continuous" <br>
+<br />
+
 Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control, for example, for SFED=18: <br>
 
 
