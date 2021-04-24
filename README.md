@@ -1,11 +1,11 @@
 # RT-Dose-Response
 
 Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative.
-As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using /=20, with 95% confidence interval of 10.43-11.90. 
+As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using alpha/beta=20, with 95% confidence interval of 10.43-11.90. 
 However, several issues undercut the author’s conclusions, issues which may generalize to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). 
 
-![Fig 1](/fig 1.png)
-Format: ![Alt Text](url)
+![Screenshot](fig 1.png)
+
 
 A fundamental assumption inherent to specification of the author’s model is a y-intercept of 0; this implies 0 local control from other background therapies, including whole brain radiotherapy and systemic therapies, and ignores competing risks including death from extracranial disease. These are not valid assumptions.
 
@@ -13,18 +13,15 @@ Maximal likelihood estimates depend on the distributional assumptions made for t
 
 For binomial data, the likelihood function [3] takes the form:
 
-![Fig 2](/fig 2.png)
-Format: ![Alt Text](url)
+![Screenshot](fig 2.png)
 
 Of which taking the ln of both sides gives the log-likelihood function:
 
-![Fig 3](/fig 3.png)
-Format: ![Alt Text](url)
+![Screenshot](fig 3.png)
 
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response yi as a function of dose xi and with weights wi:
 
-![Fig 4](/fig 4.png)
-Format: ![Alt Text](url)
+![Screenshot](fig 4.png)
 
 Where  are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. 
 
@@ -50,8 +47,7 @@ Calculations and Intervals on Original Scale
 
 Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (assuming they treated data as binomial) was calculated as -685.7, whereas the log-likelihood of a generalized additive model (GAM) with thin plate regression splines was quite better at 20.3: 
 
-![Fig 5](/fig 5.png)
-Format: ![Alt Text](url)
+![Screenshot](fig 5.png)
 
 Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model demonstrated an estimated 80% higher bias than the GAM fitted model estimates. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, as in the figure above, in contrast to the author’s conclusions.
 
