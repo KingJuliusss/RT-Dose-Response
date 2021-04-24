@@ -1,4 +1,4 @@
-<p align="center"> <h3> RT Dose Response - Flaws in "HYTEC" Methodology </h3> </p> <br>
+<p align="center"> <h1> RT Dose Response - Flaws in "HYTEC" Methodology </h1> </p> <br>
 <p align ="left">
 Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative. <br>
 <br />
