@@ -16,7 +16,7 @@ For binomial data, the likelihood function [3] takes the form: <br>
                                                
 Of which taking the ln of both sides gives the log-likelihood function: <br>
 
-<img src="/fig 3.png" width="400">  <br>
+<img src="/fig 3.png" width="600">  <br>
                                                 
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response yi as a function of dose xi and with weights wi: <br>
 
