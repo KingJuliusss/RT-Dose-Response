@@ -4,7 +4,7 @@ Recently, work on dose response modelling for radiotherapy, specifically “HYTE
 As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using a/b=20, with 95% confidence interval of 10.43-11.90. 
 However, several issues undercut the author’s conclusions, issues which may generalize to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
 
-<img src="/fig 1.png", width=100>  <br>
+<img src="/fig 1.png", width="100">  <br>
 
 A fundamental assumption inherent to specification of the author’s model is a y-intercept of 0; this implies 0 local control from other background therapies, including whole brain radiotherapy and systemic therapies, and ignores competing risks including death from extracranial disease. These are not valid assumptions. <br>
  
@@ -12,15 +12,15 @@ Maximal likelihood estimates depend on the distributional assumptions made for t
  
 For binomial data, the likelihood function [3] takes the form: <br>
 
-<img src="/fig 2.png", width=100>  <br>
+<img src="/fig 2.png", width="100">  <br>
 
 Of which taking the ln of both sides gives the log-likelihood function: <br>
 
-<img src="/fig 3.png", width=100>  <br>
+<img src="/fig 3.png", width="100">  <br>
 
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response yi as a function of dose xi and with weights wi: <br>
 
-<img src="/fig 4.png", width=100>  <br>
+<img src="/fig 4.png", width="100">  <br>
  
 Where b are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
  
