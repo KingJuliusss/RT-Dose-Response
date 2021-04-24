@@ -4,7 +4,7 @@ As an example is work [1] searching, compiling, and analyzing relevant data in a
 However, several issues undercut the author’s conclusions, issues which may generalize to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). 
  
 ￼
- 
+![alt text](<fig 1.png>)
  
  
 (Eq 1)
@@ -15,20 +15,20 @@ Maximal likelihood estimates depend on the distributional assumptions made for t
  
 For binomial data, the likelihood function [3] takes the form:
  
-￼
+￼![alt text](<fig 2.png>)
  
 (Eq 2)
 Of which taking the ln of both sides gives the log-likelihood function:
  
 ￼
- 
+![alt text](<fig 3.png>)
  
  
 (Eq 3)
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response yi as a function of dose xi and with weights wi:
  
 ￼
- 
+ ![alt text](<fig 4.png>)
  
 (Eq 4)
  
@@ -37,6 +37,8 @@ Where b are the model parameters. The Hessian matrix of second-order partial der
 The author’s treatment of the actuarial local control data is not specified. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package drc [2]. Treating 1-year LC rates as a continuous variable produces results that differ than author’s results, with TCD50 of 15.6. In fact, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 – an unexplained discrepancy.
  
 Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control, for example, for SFED=18: 
+
+![alt text](<fig 5.png>)
  
 BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
 Based on 1000 bootstrap replicates
