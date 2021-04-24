@@ -55,7 +55,7 @@ Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.
 <br />
 Next, the published median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modelled is essential data, the absence of which confounds meaningful interpretation of this medical physics dose response work.  <br>
  <br />
-Once again, the work of the authors of such dose modelling work is appreciated; however, would not such work be much better served with dose response meta-meta-regression under the employ of expert statistical support? Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. <br>
+Once again, the work of the authors of such dose modelling work is appreciated; however, would not such work be much better served with dose response meta-regression under the employ of expert statistical support? Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. <br>
  
  
 1) Redmond KJ, et al. Tumor Control Probability of Radiosurgery and Fractionated Stereotactic Radiosurgery for Brain Metastases. Int J Radiat Oncol Biol Phys. 2020 Dec 31:50360-3016(20)34451-5. Doi: 10.1016/j.ijrobp.2020.10.034. Epub ahead of print. PMID: 33390244.
