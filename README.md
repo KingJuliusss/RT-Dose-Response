@@ -6,7 +6,7 @@ As an example is work [1] searching, compiling, and analyzing relevant data in a
  <br />
 However, several issues undercut the author’s conclusions, issues which likely generalizes to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
 <br /> <center>
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%201.png?raw=true" width="300">  <br>
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig1.png?raw=true" width="300">  <br>
 <br />  </center>                                              
 A fundamental assumption inherent to specification of the author’s model is a y-intercept of 0; this implies 0 local control from other background therapies, including whole brain radiotherapy and systemic therapies, and ignores competing risks including death from extracranial disease. These are not valid assumptions. <br>
  
