@@ -21,12 +21,12 @@ Of which taking the ln of both sides gives the log-likelihood function: <br>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%203.png?raw=true" width="450">  <br>
                                               
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response yi as a function of dose xi and with weights wi: <br>
-<center>
+
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%204.png?raw=true" width="300">  <br>
-</center>
+
 Where beta are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
 The author’s treatment of the actuarial local control data is not specified. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package drc [2]. Treating 1-year LC rates as a continuous variable produces results that differ than author’s results, with TCD50 of 15.6. <br> <br /> In fact, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 – an unexplained discrepancy. <br>
-<br /> <center>
+<br /> 
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/drm%20bin.png?raw=true">  <br>
 type="binomial", AIC=1375, log likelihood=-686<br>
 <br />
@@ -34,7 +34,6 @@ type="binomial", AIC=1375, log likelihood=-686<br>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cont%20drm.png?raw=true">  <br>
 type="continuous", AIC=449 log likelihood=-221<br>
 <br />
-</center>
 Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control; such bootstrapping makes no distributional assumptions. As example, bootstrapping author's model to estimate model parameters of TCD50 and Gamma50 for comparison to author's reported data: <br>
 <br />
 <blockquote>
@@ -68,9 +67,9 @@ Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric boots
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
 Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (assuming they treated data as binomial) was calculated as -685.7, whereas the log-likelihood of a generalized additive model (GAM) with thin plate regression splines was quite better at 20.3: <br>
-<br /> <center>
+<br /> 
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%205.png?raw=true">  <br>
-<br />  </center>                               
+<br />                                
 Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 80% higher bias than the GAM fitted model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, as in the figure above, in contrast to the author’s conclusions. <br>
 <br />
 <blockquote>
