@@ -36,7 +36,7 @@ type="continuous", AIC=449 log likelihood=-221<br>
 <br />
 </center>
 Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control; such bootstrapping makes no distributional assumptions. As example, bootstrapping author's model to estimate model parameters of TCD50 and Gamma50 for comparison to author's reported data: <br>
-
+<br />
 <blockquote>
 Number of bootstrap replications R = 1000 <br>
   original  bootBias bootSE  bootMed <br>
