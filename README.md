@@ -63,7 +63,7 @@ Level     Percentile            BCa   <br>
 Calculations and Intervals on Original Scale <br>
 </blockquote>
 <br />
-Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, suggesting model parameter instability <br>
+Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, with basic bootstrap 95% confidence intervals from ~7.8-22, suggesting model parameter instability <br>
 <br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
