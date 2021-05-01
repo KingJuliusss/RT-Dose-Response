@@ -2,7 +2,7 @@
 <p align ="left">
 Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative. <br>
 <br />
-As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using a/b=20, with 95% confidence interval of 10.43-11.90. <br>
+ As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using a/b=20, with 95% confidence interval of 10.43-11.90. <br>
  <br />
 However, several issues undercut the author’s conclusions, issues which likely generalizes to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
 <br /> <center>
@@ -82,7 +82,7 @@ Next, the published median 1-year overall survival was estimated as 32%, with a 
  <br />
 Sample sizes appear to have been used as weights rather than the inverse of the variance; there is no mention of assessment of publication bias in the included studies, as is standard for meta-analysis/meta-regression. <br>
 <br />
-Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer, where the author line includes biostatistical support, rather than analysis apparently conducted exclusively by medical physicists. Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
+Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer, where the author line includes obvious an biostatistical collaborator. <br> <br /> Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
 <br />
 <br />
 1) Redmond KJ, et al. Tumor Control Probability of Radiosurgery and Fractionated Stereotactic Radiosurgery for Brain Metastases. Int J Radiat Oncol Biol Phys. 2020 Dec 31:50360-3016(20)34451-5. Doi: 10.1016/j.ijrobp.2020.10.034. Epub ahead of print. PMID: 33390244. <br>
