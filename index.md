@@ -13,12 +13,10 @@ A fundamental assumption inherent to specification of the author’s model is a 
 Maximal likelihood estimates depend on the distributional assumptions made for the dose-response model. [2] <br>
 <br />
 For binomial data, the likelihood function [3] takes the form: <br>
-<center>
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%202.png?raw=true" width="300">  <br>
-</center>                                            
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%202.png?raw=true" width="300">  <br>                                           
 Of which taking the ln of both sides gives the log-likelihood function: <br>
 <center>
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%203.png?raw=true" width="450"> <h1>]</h1> <br>
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%203.png?raw=true" width="450"> <h2>]</h2> <br>
 </center>                                               
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response y<sub>i</sub> as a function of dose x<sub>i</sub> and with weights w<sub>i</sub>: <br>
 <center>
