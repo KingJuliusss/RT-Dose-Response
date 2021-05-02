@@ -1,8 +1,8 @@
  <h1> RT Dose Response - Critique of "HYTEC" Methodology </h1><br>
 <p align="left">
-Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative. <br>
+Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative, and would thank the authors for their contribution. <br>
 <br />
- As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using a/b=20, with 95% confidence interval of 10.43-11.90. <br>
+ As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using alpha/beta=20, with 95% confidence interval of 10.43-11.90. <br>
  <br />
 However, several issues undercut the author’s conclusions, issues which likely generalizes to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
 <br /> <center>
@@ -23,7 +23,7 @@ Of which taking the ln of both sides gives the log-likelihood function: <br>
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response y<sub>i</sub> as a function of dose x<sub>i</sub> and with weights w<sub>i</sub>: <br>
 <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%204.png?raw=true" width="300">  <br>
-</center?
+</center>
 Where beta are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
 The author’s treatment of the actuarial local control data is not specified. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package drc [2]. Treating 1-year LC rates as a continuous variable produces results that differ than author’s results, with TCD50 of 15.6. <br> <br /> In fact, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 – an unexplained discrepancy. <br>
 <br /> <center>
