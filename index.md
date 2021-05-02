@@ -69,9 +69,12 @@ Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric boots
 <br />
 Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (assuming they treated data as binomial) was calculated as -685.7, whereas the log-likelihood of a generalized additive model (GAM) with thin plate regression splines was quite better at 20.3: <br>
 <br /> <center>
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gam%20gcv%20method.png?raw=true">  <br>
+<br />
+And with restricted maximal likelihood estimation (REML):
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%205.png?raw=true">  <br>
 <br />  </center>                               
-Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 80% higher bias than the GAM fitted model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, as in the figure above, in contrast to the author’s conclusions. <br>
+Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 80% higher bias than the GAM (GCV.Cp) fitted model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, in particular using REML, in contrast to the author’s conclusions. <br>
 <br />
 <blockquote>
 bias(df$LC1Yr, fitted(bin1))/bias(df$LC1Yr, fitted(gam1)) <br>
@@ -82,7 +85,7 @@ Next, the published median 1-year overall survival was estimated as 32%, with a 
  <br />
 Sample sizes appear to have been used as weights rather than the inverse of the variance; there is no mention of assessment of publication bias in the included studies, as is standard for meta-analysis/meta-regression. <br>
 <br />
-Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer, where the author line includes obvious an biostatistical collaborator. <br> <br /> Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
+Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer <br> <br /> Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
 <br />
 <br />
 1) Redmond KJ, et al. Tumor Control Probability of Radiosurgery and Fractionated Stereotactic Radiosurgery for Brain Metastases. Int J Radiat Oncol Biol Phys. 2020 Dec 31:50360-3016(20)34451-5. Doi: 10.1016/j.ijrobp.2020.10.034. Epub ahead of print. PMID: 33390244. <br>
