@@ -9,9 +9,9 @@ However, several issues undercut the author’s conclusions, issues which likely
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig1.png?raw=true" width="300">  <br>
 <br />  </center>                                              
 A fundamental assumption inherent to specification of the author’s model is a y-intercept of 0; this implies 0 local control from other background therapies, including whole brain radiotherapy and systemic therapies, and ignores competing risks including death from extracranial disease. These are not valid assumptions. <br>
- 
+<br />
 Maximal likelihood estimates depend on the distributional assumptions made for the dose-response model. [2] <br>
- 
+<br />
 For binomial data, the likelihood function [3] takes the form: <br>
 <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%202.png?raw=true" width="300">  <br>
@@ -28,9 +28,9 @@ Where beta are the model parameters. The Hessian matrix of second-order partial 
 The author’s treatment of the actuarial local control data is not specified. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package drc [2]. Treating 1-year LC rates as a continuous variable produces results that differ than author’s results, with TCD50 of 15.6. <br> <br /> In fact, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 – an unexplained discrepancy. <br>
 <br /> <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/drm%20bin.png?raw=true">  <br>
-type="binomial", AIC=1375, log likelihood=-686<br>
+type="binomial", AIC=1375, log likelihood=-686<br> </center>
 <br />
-
+<center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cont%20drm.png?raw=true">  <br>
 type="continuous", AIC=449 log likelihood=-221<br>
 <br />
