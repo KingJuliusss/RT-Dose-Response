@@ -2,31 +2,31 @@
 <p align ="left">
 Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative. <br>
 <br />
-As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using a/b=20, with 95% confidence interval of 10.43-11.90. <br>
+ As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using a/b=20, with 95% confidence interval of 10.43-11.90. <br>
  <br />
 However, several issues undercut the author’s conclusions, issues which likely generalizes to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
-<br /> 
+<br /> <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig1.png?raw=true" width="300">  <br>
-<br />                                               
+<br />  </center>                                              
 A fundamental assumption inherent to specification of the author’s model is a y-intercept of 0; this implies 0 local control from other background therapies, including whole brain radiotherapy and systemic therapies, and ignores competing risks including death from extracranial disease. These are not valid assumptions. <br>
  
 Maximal likelihood estimates depend on the distributional assumptions made for the dose-response model. [2] <br>
  
 For binomial data, the likelihood function [3] takes the form: <br>
-
+<center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%202.png?raw=true" width="300">  <br>
-                                           
+</center>                                            
 Of which taking the ln of both sides gives the log-likelihood function: <br>
-
+<center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%203.png?raw=true" width="450">  <br>
-                                              
+</center>                                               
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response yi as a function of dose xi and with weights wi: <br>
-
+<center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%204.png?raw=true" width="300">  <br>
-
-Where beta are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
+</center?
+Where b are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
 The author’s treatment of the actuarial local control data is not specified. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package drc [2]. Treating 1-year LC rates as a continuous variable produces results that differ than author’s results, with TCD50 of 15.6. <br> <br /> In fact, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 – an unexplained discrepancy. <br>
-<br /> 
+<br /> <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/drm%20bin.png?raw=true">  <br>
 type="binomial", AIC=1375, log likelihood=-686<br>
 <br />
@@ -34,6 +34,7 @@ type="binomial", AIC=1375, log likelihood=-686<br>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cont%20drm.png?raw=true">  <br>
 type="continuous", AIC=449 log likelihood=-221<br>
 <br />
+</center>
 Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control; such bootstrapping makes no distributional assumptions. As example, bootstrapping author's model to estimate model parameters of TCD50 and Gamma50 for comparison to author's reported data: <br>
 <br />
 <blockquote>
@@ -67,10 +68,13 @@ Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric boots
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
 Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (assuming they treated data as binomial) was calculated as -685.7, whereas the log-likelihood of a generalized additive model (GAM) with thin plate regression splines was quite better at 20.3: <br>
-<br /> 
+<br /> <center>
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gam%20gcv%20method.png?raw=true">  <br>
+<br />
+And with restricted maximal likelihood estimation (REML):
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%205.png?raw=true">  <br>
-<br />                                
-Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 80% higher bias than the GAM fitted model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, as in the figure above, in contrast to the author’s conclusions. <br>
+<br />  </center>                               
+Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -28.1, further evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 80% higher bias than the GAM (GCV.Cp) fitted model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit above approximately 18 Gy, in particular using REML, in contrast to the author’s conclusions. <br>
 <br />
 <blockquote>
 bias(df$LC1Yr, fitted(bin1))/bias(df$LC1Yr, fitted(gam1)) <br>
@@ -81,7 +85,7 @@ Next, the published median 1-year overall survival was estimated as 32%, with a 
  <br />
 Sample sizes appear to have been used as weights rather than the inverse of the variance; there is no mention of assessment of publication bias in the included studies, as is standard for meta-analysis/meta-regression. <br>
 <br />
-Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer, where the author line includes biostatistical support, rather than analysis apparently conducted exclusively by medical physicists. Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
+Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer <br> <br /> Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
 <br />
 <br />
 1) Redmond KJ, et al. Tumor Control Probability of Radiosurgery and Fractionated Stereotactic Radiosurgery for Brain Metastases. Int J Radiat Oncol Biol Phys. 2020 Dec 31:50360-3016(20)34451-5. Doi: 10.1016/j.ijrobp.2020.10.034. Epub ahead of print. PMID: 33390244. <br>
@@ -91,5 +95,4 @@ Once again, the work of the authors of such dose modelling work is appreciated; 
 5)Sakamoto Y, Ishiguro M, Kitigawa G. (1986). Akaike Information Criterion Statistics. D. Reidel Publishing Company. <br>
 6)Jackson WC, Silva J, Hartman HE, Dess RT, Kishan AU, Beeler WH, Gharzai LA, Jaworski EM, Mehra R, Hearn JWD, Morgan TM, Salami SS, Cooperberg MR, Mahal BA, Soni PD, Kaffenberger S, Nguyen PL, Desai N, Feng FY, Zumsteg ZS, Spratt DE. Stereotactic Body Radiation Therapy for Localized Prostate Cancer: A Systematic Review and Meta-Analysis of Over 6,000 Patients Treated On Prospective Studies. Int J Radiat Oncol Biol Phys. 2019 Jul 15;104(4):778-789. doi: 10.1016/j.ijrobp.2019.03.051. Epub 2019 Apr 6. PMID: 30959121; PMCID: PMC6770993.
  
-
 
