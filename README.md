@@ -64,23 +64,23 @@ Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric boots
 <br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
-Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (type=binomial) was calculated as -685.7.  
-At this point, let's examine the 1-year LC data, making use of <i>fitdistrplus</i>:
+At this point, let's check the distribution of the outcome 1-year LC data, making use of <i>fitdistrplus</i>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cullenfrey.png?raw=true">  <br> <br />
-So 1-year LC, a proportion bounded by 0 and 1 is consistent with Beta distribution. How can authors not check basic distribution of their data? <br> <br />
-A penalized cubic regression spline generalized additive model (GAM), k=5, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -33535 for the GAM, evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious response is noted in the GAM fit. <br>
+<b> So 1-year LC, a proportion bounded by 0 and 1, is consistent with Beta distribution. How can authors not check basic distribution of their data? </b> <br> <br />
+Goodness-of-fit parameters were compared with other models. 
+A penalized cubic regression spline generalized additive model (GAM), k=5, Beta regression family, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [5] (AIC) was estimated at 1375.4 (author's model) vs -33535 for the GAM, evidence of poor fit of the author’s chosen model. Similarly, log likelihood was estimated at -686 vs 16773, respectively, further evidence of poor fit of author's model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates as below </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious dose response above ~18-20 Gy SFED is noted in the GAM fit - in contrast to author's conclusion. <br>
 <br />
 <blockquote>
 library(Metrics)
-bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))
+bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 [1] 1.355909
-</blockquote>
+</blockquote> <br><br />
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
 Next, the published median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modelled is essential data, the absence of which confounds meaningful interpretation of this medical physics dose response work.  <br>
  <br />
 Sample sizes appear to have been used as weights rather than the inverse of the variance; there is no mention of assessment of publication bias in the included studies, as is standard for meta-analysis/meta-regression. <br>
 <br />
-Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, such as dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer <br> <br /> Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
+Once again, the work of the authors of such dose modelling work is appreciated;  <b> however, would not such work be much better served with proper methodology, i.e. dose response meta-regression, to estimate a dose-response curve from multiple summarized dose-response data, accounting for correlation amongst observations and heterogeneity across studies, under the employ of expert statistical support? Jackson et. al. [6] provide example of this for prostate cancer <br> <br /> Basic distributional assumptions appear to have not been examined in author's work. Rather than assume the data fits a model, would it not be better to select a model that best fits the data? The necessity of having the best possible information to apply clinically argues for better methodology here. </b> <br>
 <br />
 <br />
 1) Redmond KJ, et al. Tumor Control Probability of Radiosurgery and Fractionated Stereotactic Radiosurgery for Brain Metastases. Int J Radiat Oncol Biol Phys. 2020 Dec 31:50360-3016(20)34451-5. Doi: 10.1016/j.ijrobp.2020.10.034. Epub ahead of print. PMID: 33390244. <br>
@@ -90,3 +90,5 @@ Once again, the work of the authors of such dose modelling work is appreciated; 
 5)Sakamoto Y, Ishiguro M, Kitigawa G. (1986). Akaike Information Criterion Statistics. D. Reidel Publishing Company. <br>
 6)Jackson WC, Silva J, Hartman HE, Dess RT, Kishan AU, Beeler WH, Gharzai LA, Jaworski EM, Mehra R, Hearn JWD, Morgan TM, Salami SS, Cooperberg MR, Mahal BA, Soni PD, Kaffenberger S, Nguyen PL, Desai N, Feng FY, Zumsteg ZS, Spratt DE. Stereotactic Body Radiation Therapy for Localized Prostate Cancer: A Systematic Review and Meta-Analysis of Over 6,000 Patients Treated On Prospective Studies. Int J Radiat Oncol Biol Phys. 2019 Jul 15;104(4):778-789. doi: 10.1016/j.ijrobp.2019.03.051. Epub 2019 Apr 6. PMID: 30959121; PMCID: PMC6770993.
  
+
+
