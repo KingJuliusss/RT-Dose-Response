@@ -4,7 +4,7 @@ Recently, work on dose response modelling for radiotherapy, specifically “HYTE
 <br />
  As an example is work [1] searching, compiling, and analyzing relevant data in a group of small brain metastases ≤ 2.0 cm, with the authors estimating 1-year local control of 85% and 95% for 18 and 24 Gy, respectively, and estimating 50% tumor control dose (TCD50) 11.21 Gy single fraction equivalent dose (SFED) using alpha/beta=20, with 95% confidence interval of 10.43-11.90. <br>
  <br />
-However, several issues undercut the author’s conclusions, issues which likely generalizes to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
+However, several issues undercut the author’s conclusions, issues which likely generalize to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
 <br /> <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig1.png?raw=true" width="300">  <br>
 <br />  </center>                                              
