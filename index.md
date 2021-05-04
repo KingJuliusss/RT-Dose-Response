@@ -74,7 +74,7 @@ A penalized cubic regression spline generalized additive model (GAM), k=5, was c
 library(Metrics)
 bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))
 [1] 1.355909
-</blockquote>
+</blockquote> <br><br />
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
 Next, the published median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modelled is essential data, the absence of which confounds meaningful interpretation of this medical physics dose response work.  <br>
  <br />
