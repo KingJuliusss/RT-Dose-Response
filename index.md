@@ -64,10 +64,10 @@ Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric boots
 <br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
-Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (type=binomial) was calculated as -685.7.  
-At this point, let's examine the 1-year LC data, making use of <i>fitdistrplus</i>:
+Goodness-of-fit parameters were compared with other models, with the log-likelihood of the author’s stated function (type=binomial) was calculated as -685.7. <br /> 
+At this point, let's check the distribution of the outcome 1-year LC data, making use of <i>fitdistrplus</i>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cullenfrey.png?raw=true">  <br> <br />
-So 1-year LC, a proportion bounded by 0 and 1 is consistent with Beta distribution. How can authors not check basic distribution of their data? <br> <br />
+<b> So 1-year LC, a proportion bounded by 0 and 1, is consistent with Beta distribution. How can authors not check basic distribution of their data? </b> <br> <br />
 A penalized cubic regression spline generalized additive model (GAM), k=5, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [5] (AIC) was similarly estimated at 1375.4 vs -33535 for the GAM, evidence of poor fit of the author’s chosen model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious dose response above ~18-20 Gy SFED is noted in the GAM fit - in contrast to author's conclusion. <br>
 <br />
 <blockquote>
