@@ -72,7 +72,7 @@ A penalized cubic regression spline generalized additive model (GAM), k=5, Beta 
 <br />
 <blockquote>
 library(Metrics)
-bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))
+bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 [1] 1.355909
 </blockquote> <br><br />
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
