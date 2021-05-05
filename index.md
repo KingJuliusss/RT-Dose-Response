@@ -60,7 +60,7 @@ Level     Percentile            BCa   <br>
 Calculations and Intervals on Original Scale <br>
 </blockquote>
 <br />
-Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, with basic bootstrap 95% confidence intervals from ~7.8-22, suggesting model parameter instability <br>
+Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, with basic bootstrap 95% confidence intervals from ~7.8-22, suggesting model parameter instability.<br>
 <br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
@@ -68,7 +68,7 @@ At this point, let's check the distribution of the outcome 1-year LC data, makin
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cullenfrey.png?raw=true">  <br> <br />
 <b> So 1-year LC, a proportion bounded by 0 and 1, is consistent (not surprisingly) with Beta distribution. How can authors not check basic distribution of their data? </b> <br> <br />
 Goodness-of-fit parameters were compared with other models. 
-A penalized cubic regression spline generalized additive model (GAM), k=5, Beta regression family, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [5] (AIC) was estimated at 1375.4 (author's model) vs -33535 for the GAM, evidence of poor fit of the author’s chosen model. Similarly, log likelihood was estimated at -686 vs 16773, respectively, further evidence of poor fit of author's model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates as below </b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious dose response above ~18-20 Gy SFED is noted in the GAM fit - in contrast to author's conclusion. <br>
+A penalized cubic regression spline generalized additive model (GAM), k=5, beta regression family, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [5] (AIC) was estimated at 1375.4 (author's model) vs -33535 for the GAM, evidence of poor fit of the author’s chosen model. Similarly, log likelihood was estimated at -686 vs 16773, respectively, further evidence of poor fit of author's model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates as below</b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. No obvious dose response above ~18-20 Gy SFED is noted in the GAM fit - in contrast to author's conclusion. <br>
 <br />
 <blockquote>
 library(Metrics)
