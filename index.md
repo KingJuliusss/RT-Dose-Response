@@ -1,4 +1,5 @@
- <h1> RT Dose Response - Critique of "HYTEC" Methodology </h1><br>
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+<h1> RT Dose Response - Critique of "HYTEC" Methodology </h1><br>
 <p align="left">
 Recently, work on dose response modelling for radiotherapy, specifically “HYTEC” project and “PENTEC” project, has been published, work for which this reader is appreciative, and would thank the authors for their contribution. <br>
 <br />
@@ -89,5 +90,7 @@ Once again, the work of the authors of such dose modelling work is appreciated; 
 4) Davison AC, Hinkley DV (1997). Bootstrap Methods and Their Applications. Cambridge University Press, Cambridge. ISBN 0-521-5739 2, http://statwww.epfl.ch/davison/BMA/. <br>
 5)Sakamoto Y, Ishiguro M, Kitigawa G. (1986). Akaike Information Criterion Statistics. D. Reidel Publishing Company. <br>
 6)Jackson WC, Silva J, Hartman HE, Dess RT, Kishan AU, Beeler WH, Gharzai LA, Jaworski EM, Mehra R, Hearn JWD, Morgan TM, Salami SS, Cooperberg MR, Mahal BA, Soni PD, Kaffenberger S, Nguyen PL, Desai N, Feng FY, Zumsteg ZS, Spratt DE. Stereotactic Body Radiation Therapy for Localized Prostate Cancer: A Systematic Review and Meta-Analysis of Over 6,000 Patients Treated On Prospective Studies. Int J Radiat Oncol Biol Phys. 2019 Jul 15;104(4):778-789. doi: 10.1016/j.ijrobp.2019.03.051. Epub 2019 Apr 6. PMID: 30959121; PMCID: PMC6770993.
+
+<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
  
 
