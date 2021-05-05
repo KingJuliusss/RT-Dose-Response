@@ -33,7 +33,7 @@ type="binomial", AIC=1375, log likelihood=-686<br> </center>
 type="continuous", AIC=449 log likelihood=-221<br>
 <br />
 </center>
-Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control; such bootstrapping makes no distributional assumptions. As example, bootstrapping author's model to estimate model parameters of TCD50 and Gamma50 for comparison to author's reported data: <br>
+Profile likelihood estimates are provided, the methodology of which is unspecified, but appear much smaller than nonparametric bootstrapped [4] 1-year local control. As example, bootstrapping author's model to estimate model parameters of TCD50 and Gamma50 for comparison to author's reported data: <br>
 <br />
 <blockquote>
 Number of bootstrap replications R = 1000 <br>
@@ -61,7 +61,7 @@ Level     Percentile            BCa   <br>
 Calculations and Intervals on Original Scale <br>
 </blockquote>
 <br />
-Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, with basic bootstrap 95% confidence intervals from ~7.8-22, suggesting model parameter instability.<br>
+Notice the magnitude of the empiric CI of TCD50 parameter by nonparametric bootstrapping, with basic bootstrap 95% confidence intervals from ~7.8-22, suggesting model parameter instability - something is badly wrong with trying to force fit the author's "logistic" model to this data!<br>
 <br />
 “Fisher exact test, median splits” p-values are provided, but it is unclear what the hypothesis being tested is. <br>
 <br />
@@ -93,6 +93,7 @@ Once again, the work of the authors of such work is appreciated; author's report
 
 <a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
  
+
 
  
 
