@@ -80,6 +80,25 @@ bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 GAM, k=5, beta regression family fit and confidence intervals:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
 Let's now examine the fit, with confidence intervals, of zero and one inflated beta regression via <i>brms</i>:
+<blockquote>
+Family: zero_one_inflated_beta<br>
+  Links: mu = logit; phi = identity; zoi = identity; coi = identity<br>
+Formula: LC1Yr | weights(N) ~ SFED<br>
+   Data: df (Number of observations: 44)<br>
+Samples: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;<br>
+         total post-warmup samples = 4000<br>
+<br />
+Population-Level Effects:<br>
+          Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS<br>
+Intercept     0.54      0.06     0.42     0.67 1.00     5303     3020<br>
+SFED          0.08      0.00     0.07     0.08 1.00     5616     3193<br>
+<br />
+Family Specific Parameters:<br>
+    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS<br>
+phi     9.41      0.13     9.17     9.68 1.00     3687     2582<br>
+zoi     0.00      0.00     0.00     0.00 1.00     3830     2645<br>
+coi     0.98      0.02     0.92     1.00 1.00     3403     1953<br>
+</blockquote>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20beta%20prob%20bnds.png?raw=true">  <br> <br />
 And <b>importantly, the <u>predictive intervals</u></b>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/pred%20int%2001inf.png?raw=true">  <br> <br /> 
