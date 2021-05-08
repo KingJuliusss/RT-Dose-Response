@@ -98,7 +98,7 @@ Family Specific Parameters:<br>
 phi     9.41      0.13     9.17     9.68 1.00     3687     2582<br>
 zoi     0.00      0.00     0.00     0.00 1.00     3830     2645<br>
 coi     0.98      0.02     0.92     1.00 1.00     3403     1953<br>
-</blockquote>
+</blockquote> <br /><br />
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20beta%20prob%20bnds.png?raw=true">  <br> <br />
 And <b>importantly, the <u>predictive intervals</u></b>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/pred%20int%2001inf.png?raw=true">  <br> <br /> 
