@@ -23,7 +23,7 @@ Minimization of the negative log-likelihood function is then performed, which fo
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%204.png?raw=true" width="300">  <br>
 </center>
 Where beta are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
-The author’s treatment of the actuarial local control data is not specified in the manuscript, and only in a separate "primer" article (https://doi.org/10.1016/j.ijrobp.2020.11.020) do they note general use of log likelihood function for binomial data, so one must assume that is their treatment here as well. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package <i>drc</i> [2]. As an example, treating 1-year LC rates as a continuous variable produces results with TCD50 of 15.6. <br> <br /> As an aside, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 – an unexplained discrepancy. <br>
+The author’s treatment of the actuarial local control data is not specified in the manuscript, and only in a separate "primer" article (https://doi.org/10.1016/j.ijrobp.2020.11.020) do they note general use of log likelihood function for binomial data, so one must assume that is their treatment here as well. The author’s provided tumor control probability equation was created as a function and modelled for small metastases outcome of 1-year LC using R package <i>drc</i> [2]. As an example, treating 1-year LC rates as a continuous variable produces results with TCD50 of 15.6. <br> <br /> As an aside, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 - an error? <br>
 <br /> <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/drm%20bin.png?raw=true">  <br>
 type="binomial", AIC=1375, log likelihood=-686<br> </center>
@@ -77,10 +77,11 @@ library(Metrics)
 bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 [1] 1.355909
 </blockquote> <br><br />
+GAM, k=5, beta regression family fit and confidence intervals:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
-Let's examine now with zero and one inflated beta regression:
+Let's examine now fit of zero and one inflated beta regression via <i>brms</i>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20beta%20prob%20bnds.png?raw=true">  <br> <br />
-And <b>most importantly, the predictive intervals:
+And <b>importantly, the predictive intervals</b>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/pred%20int%2001inf.png?raw=true">  <br> <br /> 
 Next, the published median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modelled is essential data, the absence of which confounds meaningful interpretation of this medical physics dose response work.  <br>
  <br />
