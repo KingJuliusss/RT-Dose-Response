@@ -7,16 +7,16 @@ Recently, work on dose response modelling for radiotherapy, specifically “HYTE
  <br />
 However, several issues undercut the author’s conclusions, issues which likely generalize to the greater HYTEC work. First, the authors describe use of a logistic model applied to SFED with outcome of local control (LC). <br> </p>
 <br /> <center>
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig1.png?raw=true" width="300">  <br>
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig1.png?raw=true" width="200">  <br>
 <br />  </center>                                              
 A fundamental assumption inherent to specification of the author’s model is a y-intercept of 0; this implies 0 local control from other background therapies, including whole brain radiotherapy and systemic therapies, and ignores competing risks including death from extracranial disease. These are not valid assumptions. <br>
 <br />
 Maximal likelihood estimates depend on the distributional assumptions made for the dose-response model. [2] <br>
 <br />
 For binomial data, the likelihood function [3] takes the form: <br>
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%202.png?raw=true" width="300">  <br>                                           
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%202.png?raw=true" width="200">  <br>                                           
 Of which taking the ln of both sides gives the log-likelihood function: <br>
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%203.png?raw=true" width="450">  
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fig%203.png?raw=true" width="300">  
 <br> <br />
 Minimization of the negative log-likelihood function is then performed, which for continuous data is minimization of nonlinear least squares, for response y<sub>i</sub> as a function of dose x<sub>i</sub> and with weights w<sub>i</sub>: <br>
 <center>
