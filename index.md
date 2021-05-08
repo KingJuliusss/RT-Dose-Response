@@ -79,7 +79,7 @@ bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 </blockquote> <br><br />
 GAM, k=5, beta regression family fit and confidence intervals:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
-Let's examine now fit, with confidence intervals, of zero and one inflated beta regression via <i>brms</i>:
+Let's now examine the fit, with confidence intervals, of zero and one inflated beta regression via <i>brms</i>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20beta%20prob%20bnds.png?raw=true">  <br> <br />
 And <b>importantly, the <u>predictive intervals</u></b>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/pred%20int%2001inf.png?raw=true">  <br> <br /> 
