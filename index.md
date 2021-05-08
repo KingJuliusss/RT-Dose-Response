@@ -78,8 +78,8 @@ bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 [1] 1.355909
 </blockquote> <br><br />
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">  <br> <br />
-However, I would note that since boundary values of 100% exist, the best bet is to use zero and one inflated beta regression:
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20prob%20bnds.png?raw=true">  <br> <br />
+Let's examine now with zero and one inflated beta regression:
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20beta%20prob%20bnds.png?raw=true">  <br> <br />
 Next, the published median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modelled is essential data, the absence of which confounds meaningful interpretation of this medical physics dose response work.  <br>
  <br />
 Sample sizes appear to have been used as weights rather than the inverse of the variance; there is no mention of assessment of publication bias in the included studies, as is standard for meta-analysis/meta-regression. <br>
