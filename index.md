@@ -73,7 +73,7 @@ This is of importance in terms of maximal likelihood estimates, because it appea
 Goodness-of-fit parameters were compared with other models for correct data type; a penalized cubic regression spline generalized additive model (GAM), k=5, beta regression family, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [6] (AIC) was estimated at 1375.4 (author's model) vs -33535 for the GAM, evidence of poor fit of the author’s chosen model. Similarly, log likelihood was estimated at -686 vs 16773, respectively, further evidence of poor fit of author's model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates as below</b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. <br>
 <br />
 <blockquote>
-library(Metrics)
+library(Metrics) <br>
 bias(df$LC1Yr, fitted(drm.bin))/bias(df$LC1Yr), fitted(gam_k5))<br>
 [1] 1.355909
 </blockquote> <br><br />
