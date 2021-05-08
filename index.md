@@ -69,7 +69,7 @@ At this point, let's check the distribution of the outcome 1-year LC data, makin
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/cullenfrey.png?raw=true">  <br> <br />
 <b> So 1-year LC, a proportion bounded by 0 and 1, is consistent (not surprisingly) with Beta distribution. Was data type/distribution not examined by the authors? </b> <br> <br />
 This is of importance in terms of maximal likelihood estimates, because it appears the likelihood function for the wrong data distribution was used. As per Owen:[5]<br> <br /> 
-<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/betall.png?raw=true" width="400"> <br> <br /> 
+<img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/betall.png?raw=true" width="600"> <br> <br /> 
 Goodness-of-fit parameters were compared with other models for correct data type; a penalized cubic regression spline generalized additive model (GAM), k=5, beta regression family, was created with package <i>mgcv</i>. <br> <br />Akaike information criterion [6] (AIC) was estimated at 1375.4 (author's model) vs -33535 for the GAM, evidence of poor fit of the author’s chosen model. Similarly, log likelihood was estimated at -686 vs 16773, respectively, further evidence of poor fit of author's model.  Author’s fitted model <b> demonstrated an estimated 36% higher bias than the maximal likelihood fitted GAM model estimates as below</b>. Unfortunately, the authors make no such estimation of model goodness-of-fit, performance, or alternate model comparison. <br>
 <br />
 <blockquote>
