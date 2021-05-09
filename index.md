@@ -25,9 +25,6 @@ Minimization of the negative log-likelihood function is then performed, which fo
 Where beta are the model parameters. The Hessian matrix of second-order partial derivatives can be calculated to determine the variance-covariance matrix solution numerically [2]. <br>
 The authors' treatment of the actuarial local control data is not specified in the manuscript, and only in a separate "primer" article (https://doi.org/10.1016/j.ijrobp.2020.11.020) do they note general use of log likelihood function for binomial data, so one must assume that is their treatment here as well. The authors' provided tumor control probability equation was created as a function and modeled for small metastases outcome of 1-year LC using R package <i>drc</i> [2]. As an example, treating 1-year LC rates as a continuous variable produces results with TCD50 of 15.6. <br> <br /> As an aside, I notice that the author’s table EA1 would total to N=12,197 for ≤ 2.0 cm brain metastases; underneath this, table EA4 for ≤ 2.0 cm metastasis notes N=10,106 - an error? At minimum, this requires clarification.<br>
 <br /> 
-<blockquote>
-model1 <- drm(LC1Yr~SFED, data=df, weights=N, type="binomial", fct=DRC.Logist.2(), start=c(1,1))
-</blockquote>         
 <center>
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/drm%20bin.png?raw=true">  <br>
 type="binomial", AIC=1375, log likelihood=-686<br> </center>
