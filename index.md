@@ -99,9 +99,9 @@ zoi     0.00      0.00     0.00     0.00 1.00     3830     2645<br>
 coi     0.98      0.02     0.92     1.00 1.00     3403     1953<br>
 </blockquote> <br /><br />
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/fit%2001inf%20beta%20prob%20bnds.png?raw=true">  <br> <br />
-And <b>importantly, the <u>prediction intervals</u></b>:
+And <b>importantly, the <u>predictive intervals</u></b>:
 <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/pred%20int%2001inf.png?raw=true">  <br> <br />
-Notably absent from the authors' work are prediction intervals, which demonstrate clearly how little can be predicted from this data in terms of dose response! <br><br />
+Notably absent from the authors' work are predictive intervals, which demonstrate clearly how little can be predicted from this data in terms of dose response! <br><br />
 Next, the median 1-year overall survival was estimated as 32%, with a range of 18-71% and multiple missing values. Such high competing risk of death with local control warrants consideration, suggesting significant individual study level variance in terms of 1-year local control, simply due to censoring alone. Variances, including of the individual study-level outcomes being modeled is essential data, the absence of which confounds meaningful interpretation of this work.  <br>
  <br />
 There is no mention of assessment of publication bias in the included studies, as is standard for meta-analysis/meta-regression; in following with meta-analysis methods, inverse variances should be used at weights, rather than sample sizes [7]<br>
