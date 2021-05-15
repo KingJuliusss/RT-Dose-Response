@@ -118,6 +118,6 @@ Once again, the work of the authors of such work is appreciated; authors' report
 7)M Borenstein, L Hedges, H Rothstein. Introduction to Meta-Analysis. 2007. https://www.meta-analysis.com/downloads/Meta%20Analysis%20Fixed%20vs%20Random%20effects.pdf
 8)Jackson WC, Silva J, Hartman HE, Dess RT, Kishan AU, Beeler WH, Gharzai LA, Jaworski EM, Mehra R, Hearn JWD, Morgan TM, Salami SS, Cooperberg MR, Mahal BA, Soni PD, Kaffenberger S, Nguyen PL, Desai N, Feng FY, Zumsteg ZS, Spratt DE. Stereotactic Body Radiation Therapy for Localized Prostate Cancer: A Systematic Review and Meta-Analysis of Over 6,000 Patients Treated On Prospective Studies. Int J Radiat Oncol Biol Phys. 2019 Jul 15;104(4):778-789. doi: 10.1016/j.ijrobp.2019.03.051. Epub 2019 Apr 6. PMID: 30959121; PMCID: PMC6770993.
 
-<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a> <br>
+<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a><br><br />
 <a href="http://www.r-bloggers.com">R-bloggers</a>
 
