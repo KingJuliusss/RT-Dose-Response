@@ -8,8 +8,8 @@ layout: null
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;rss version=&quot;2.0&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
     &lt;channel&gt;
-        &lt;title&gt;{{ site.title &#124; xml_escape }}&lt;/title&gt;
-        &lt;description&gt;{{ site.description &#124; xml_escape }}&lt;/description&gt;
+        &lt;title&gt;{{ KingJuliusss Blog &#124; xml_escape }}&lt;/title&gt;
+        &lt;description&gt;{{ Welcome to my blog &#124; xml_escape }}&lt;/description&gt;
         &lt;link&gt;{{ site.url }}{{ site.baseurl }}/&lt;/link&gt;
         &lt;atom:link href=&quot;{{ &quot;/feed.rbloggers.xml&quot; &#124; prepend: site.baseurl &#124; prepend: site.url }}&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot;/&gt;
         &lt;pubDate&gt;{{ site.time &#124; date_to_rfc822 }}&lt;/pubDate&gt;
