@@ -1,4 +1,4 @@
-<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+<head><link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml"></head>
 <h1> RT Dose Response - A Critique of "HYTEC" Methodology </h1><br>
 <p align="left">
 Recently, work on dose response modeling for radiotherapy, specifically the “HYTEC” project, has been published, work for which this reader is appreciative, and would thank the authors for their contribution. <br>
