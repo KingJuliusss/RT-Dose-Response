@@ -1,20 +1,42 @@
+---
+permalink: /feed.xml
+navbar: false
+---
+
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
-        <channel>
-
-                <title>King Julius Blog Feed</title>
-                <description>RSS feed</description>
-                <link>http://kingjuliusss.github.io/RT-Dose-Response/</link>
-                <lastBuildDate>Tues, 18 Dec 2021</lastBuildDate>
-                <managingEditor>KingJjjuliusss@yahoo.com (King Julius)</managingEditor>
-
-                <item>
-                        <title>On Radiation Dose Response Models</title>
-                        <link>http://kingjuliusss.github.io/RT-Dose-Response</link>
-                        <pubDate>Tues, 18 Dec 2021</pubDate>
-                        <description>Using R for radiation dose response modelling, with critical analysis of the recent HYTEC work</description>
-                        <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/gamk5.png?raw=true">
-                </item>
-
-        </channel>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  >
+  <channel>
+    <title xml:lang="en">King Julius Blog</title>
+    <atom:link type="application/atom+xml" href="https://kingjuliusss.github.io/RT-Dose-Response/" rel="self"/>
+    <link>https://kingjuliusss.github.io/RT-Dose-Response/</link>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <language>en-US</language>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    <description>King Julius Blog</description>
+   
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title | xml_escape}}</title>
+      <link>https://kingjuliusss.github.io{{ post.url }}</link>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <dc:creator>{{ post.author }}</dc:creator>
+      {% for tag in post.tags %}
+      <category>{{ tag | xml_escape }}</category>
+      {% endfor %}
+      {% for cat in post.categories %}
+      <category>{{ cat | xml_escape }}</category>
+      {% endfor %}
+      <guid isPermaLink="true">https://kingjuliusss.github.io{{ post.url }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
 </rss>
