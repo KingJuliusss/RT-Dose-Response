@@ -1,3 +1,6 @@
+title: "Critique of HYTEC Methods"
+tags: ["R"]
+
 <head><link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml"></head>
 <h1> RT Dose Response - A Critique of "HYTEC" Methodology </h1><br>
 <p align="left">
