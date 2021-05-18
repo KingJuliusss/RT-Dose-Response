@@ -24,8 +24,8 @@ navbar: false
    
     {% for post in site.posts %}
     <item>
-      <title>{{ post.title | xml_escape}}</title>
-      <link>https://kingjuliusss.github.io{{ post.url }}</link>
+      <title>RT Dose Response Analysis</title>
+      <link>https://kingjuliusss.github.io/index.md</link>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <dc:creator>{{ post.author }}</dc:creator>
       {% for tag in post.tags %}
