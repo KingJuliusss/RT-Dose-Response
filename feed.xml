@@ -1,33 +1,19 @@
----
-permalink: /feed.xml
-navbar: false
----
-
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-  >
-  <channel>
-    <title xml:lang="en">King Julius Blog</title>
-    <atom:link type="application/atom+xml" href="https://kingjuliusss.github.io/RT-Dose-Response/" rel="self"/>
-    <link>https://kingjuliusss.github.io/RT-Dose-Response/</link>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <language>en-US</language>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    <description>King Julius Blog</description>
-   
-    <item>
-      <title>RT Dose Response Analysis</title>
-      <link>https://kingjuliusss.github.io/index.md</link>
-      <guid isPermaLink="true">https://kingjuliusss.github.io{{ post.url }}</guid>
-      <description>{{ post.content | xml_escape }}</description>
-    </item>
-   
-  </channel>
-</rss>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Example Feed</title>
+  <link href="http://example.org/"/>
+  <updated>2003-12-13T18:30:02Z</updated>
+  <author>
+    <name>John Doe</name>
+  </author>
+  <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6</id>
+
+  <entry>
+    <title>Atom-Powered Robots Run Amok</title>
+    <link href="https://kingjuliusss.github.io/RT-Dose-Response/"/>
+    <updated>5/18/21</updated>
+    <summary>Radiation dose response analysis with R, as well as critical review of recent published HYTEC work</summary>
+  </entry>
+
+</feed>
