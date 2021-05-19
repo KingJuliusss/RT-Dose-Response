@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" mlns:media="http://search.yahoo.com/mrss/">
-  <id>tag:github.com,2008:/kingjuliusss</id>
+  <id>tag:kingjuliusss.github.io,2008:/RT-Dose-Response</id>
   <title>King Julius Feed</title>
   <link type="text/html" rel="alternate" href="https://kingjuliusss.github.io/RT-Dose-Response"/>
   <link type="application/atom+xml" rel="alternate" href="/feed.xml">
