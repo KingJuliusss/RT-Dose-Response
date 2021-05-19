@@ -3,7 +3,7 @@
   <id>tag:github.com,2008:/kingjuliusss</id>
   <title>King Julius Feed</title>
   <link type="text/html" rel="alternate" href="https://kingjuliusss.github.io/RT-Dose-Response"/>
-  <link type="application/atom+xml" rel="self" href="https://github.com/kingjuliusss.atom">
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml">
     <updated>2021-05-19T01:33:11X</updated>
   <entry>
     <title>Radiation Therapy Dose Response Analysis with R and Critique of HYTEC</title>
