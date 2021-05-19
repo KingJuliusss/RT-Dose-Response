@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
+  <id>tag:github.com,2008:/kingjuliusss</id>
   <title>King Julius Feed</title>
-  <link href="https://kingjuliusss.github.io/RT-Dose-Response"/>
-  <updated>5/18/21</updated>
-  <author>
-    <name>King Julius</name>
-  </author>
-  <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af5</id>
-
+  <link type="text/html" rel="alternate" href="https://kingjuliusss.github.io/RT-Dose-Response"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/kingjuliusss.atom">
+    <updated>2021-05-19T01:33:11X</updated>
   <entry>
     <title>Radiation Therapy Dose Response Analysis with R and Critique of HYTEC</title>
     <link href="https://kingjuliusss.github.io/RT-Dose-Response/"/>
-    <img src="https://github.com/KingJuliusss/RT-Dose-Response/blob/main/pred%20int%2001inf.png?raw=true">
-    <updated>5/18/21</updated>
     <summary>Radiation dose response analysis with R, as well as critical review of recent published HYTEC work</summary>
   </entry>
 
