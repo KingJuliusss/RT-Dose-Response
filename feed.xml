@@ -7,7 +7,7 @@
     <updated>2021-05-19T01:33:11X</updated>
   <entry>
     <title>Radiation Therapy Dose Response Analysis with R and Critique of HYTEC</title>
-    <link href="https://kingjuliusss.github.io/RT-Dose-Response/"/>
+    <link type="text/html" href="https://kingjuliusss.github.io/RT-Dose-Response/"/>
     <summary>Radiation dose response analysis with R, as well as critical review of recent published HYTEC work</summary>
   </entry>
 
