@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" mlns:media="http://search.yahoo.com/mrss/">
+<feed xmlns="http://www.w3.org/2005/Atom">
   <title>King Julius Feed</title>
-  <link type="application/atom+xml" title="King Julius's Blog" rel="self" href="/feed.xml">
+  <link type="application/atom+xml" title="King Julius's Blog" rel="alternate" href="/feed.xml">
     <updated>2021-05-19T01:33:11X</updated>
   <entry>
     <title>Radiation Therapy Dose Response Analysis with R and Critique of HYTEC</title>
