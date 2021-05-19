@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" mlns:media="http://search.yahoo.com/mrss/">
   <title>King Julius Feed</title>
-  <link type="text/html" rel="alternate" href="https://kingjuliusss.github.io/RT-Dose-Response"/>
   <link type="application/atom+xml" title="{{site.title}}" rel="self" href="/feed.xml">
     <updated>2021-05-19T01:33:11X</updated>
   <entry>
